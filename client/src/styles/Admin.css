@@ -1,0 +1,225 @@
+.container-adminclass {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+
+.add-typee {
+  margin-right: 20vw;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+  border-radius: 24px;
+  margin-top: 3vh;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.add-typee:hover {
+  background-color: #0a20e6;
+  color: white;
+}
+
+.add-brand {
+  margin-right: 20vw;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+  border-radius: 24px;
+  margin-top: 3vh;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.add-brand:hover {
+  background-color: #0a20e6;
+  color: white;
+}
+
+.add-market {
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+  border-radius: 24px;
+  margin-top: 3vh;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.add-market:hover {
+  background-color: #0a20e6;
+  color: white;
+}
+
+.delete-brand-or-type {
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+  border-radius: 24px;
+  margin-top: 3vh;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.delete-brand-or-type:hover {
+  background-color: #0a20e6;
+  color: white;
+}
+
+.admin-row-11 {
+  margin-left: 0vw;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+  border-radius: 24px;
+  margin-top: 3vh;
+  transition: 0.3s;
+}
+
+.id-route-admin {
+  text-decoration: none;
+}
+
+.id-route-edit {
+  display: flex;
+  justify-content: right;
+}
+
+.id-route-edit-a {
+  text-decoration: none;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 20px;
+  padding: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.id-route-edit-a:hover {
+  color: #ffffff;
+}
+
+.id-route-edit-a:hover {
+  background-color: #0a20e6;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+.d-route-edit-first {
+  display: flex;
+  color: #0a20e6;
+}
+
+.id-route-image {
+  display: flex;
+  margin-top: 10px;
+}
+
+.id-route-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.admin-roll-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1080px) {
+  .container-adminclass {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-adminclass-second {
+    margin-right: 0px;
+  }
+  .add-brand {
+    margin-right: 0vw;
+  }
+  .admin-row-11 {
+    width: 300px;
+  }
+  .add-brand {
+    width: 400px;
+  }
+  .add-market {
+    margin-right: 0vw;
+    width: 400px;
+  }
+  .delete-brand-or-type {
+    width: 400px;
+    margin-right: 0vw;
+  }
+  .add-typee {
+    width: 400px;
+    margin-right: 0vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .admin-roll-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .admin-row-11 {
+    width: 300px;
+  }
+  .add-type {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .add-brand {
+    width: 300px;
+  }
+  .add-market {
+    margin-right: 0vw;
+    width: 300px;
+  }
+  .delete-brand-or-type {
+    width: 300px;
+    margin-right: 0vw;
+  }
+  .add-typee {
+    width: 300px;
+    margin-right: 0vw;
+  }
+}

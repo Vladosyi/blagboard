@@ -1,0 +1,233 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-main-main {
+  display: flex;
+  height: 400px;
+  padding: 0px;
+  width: 100vh;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+}
+
+.container-form1 {
+  width: 90vh;
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+}
+
+.container-brand-device {
+  display: inline-flex;
+  margin-bottom: 0px;
+}
+
+.market-container-second {
+  cursor: pointer;
+}
+
+.form1-second {
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
+    0px 18px 36px rgba(166, 175, 186, 0.2);
+}
+
+.wrapper-second {
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15);
+}
+
+.form1 {
+  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15);
+}
+
+.container-wrapper-shop {
+  display: flex;
+}
+
+@media screen and (max-width: 650px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    transform: scale(80%);
+  }
+}
+
+@media screen and (max-width: 592px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -4vw;
+    transform: scale(80%);
+  }
+}
+
+@media screen and (max-width: 534px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -6vw;
+    transform: scale(80%);
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -8vw;
+    transform: scale(80%);
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -8vw;
+    transform: scale(70%);
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -10vw;
+    transform: scale(70%);
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -14vw;
+    transform: scale(70%);
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -14vw;
+    transform: scale(70%);
+    margin-top: -80px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -14vw;
+    transform: scale(60%);
+    margin-top: -80px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -16vw;
+    transform: scale(60%);
+    margin-top: -80px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -18vw;
+    transform: scale(60%);
+    margin-top: -80px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -20vw;
+    transform: scale(60%);
+    margin-top: -80px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -15vw;
+    transform: scale(50%);
+    margin-top: -140px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -20vw;
+    transform: scale(50%);
+    margin-top: -140px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -20vw;
+    transform: scale(50%);
+    margin-top: -140px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .container-wrapper-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-left: -25vw;
+    transform: scale(50%);
+    margin-top: -140px;
+  }
+}
