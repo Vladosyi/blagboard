@@ -1,8 +1,8 @@
 const Router = require("express");
 const router = new Router();
 
-const ordersController = require("./../controllers/ordersController");
-const checkRole = require("./../middleware/checkRoleMiddleware");
+const ordersController = require("../controllers/ordersController.js");
+const checkRole = require("../middleware/checkRoleMiddleware.js");
 
 router
   .post("/", ordersController.create)

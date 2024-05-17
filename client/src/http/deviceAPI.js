@@ -1,4 +1,5 @@
-import { $authHost, $host } from "./index";
+import {$authHost, $host} from "./index";
+import jwt_decode from "jwt-decode";
 
 export const createType = async (type) => {
   const { data } = await $authHost.post("api/type", type);
@@ -14,6 +15,7 @@ export const deleteType = async (id) => {
   const { data } = await $authHost({ method: "DELETE", url: "api/type/" + id });
   return data;
 };
+
 
 export const createBrand = async (brand) => {
   const { data } = await $authHost.post("api/brand", brand);

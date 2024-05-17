@@ -1,4 +1,4 @@
-const { Rating, Device } = require("./../models/models");
+const { Rating, Device } = require("../models/models.js");
 const jwt = require("jsonwebtoken");
 
 class RatingController {

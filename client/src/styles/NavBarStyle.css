@@ -12,6 +12,28 @@
   box-sizing: border-box;
 }
 
+
+.navbar{
+
+}
+.navbar__container{
+  padding: 5px 20px;
+  
+}
+
+.navbar__wrapper{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.navbar__ul_left{
+  display: flex;
+}
+
+
+
+
+
 html,
 body {
   overflow-x: hidden;
@@ -48,6 +70,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 0px;
 }
 
@@ -66,11 +89,11 @@ body {
   cursor: pointer;
 }
 
-.blagboard-shop-p:hover{
+.blagboard-shop-p:hover {
   color: #0012b6;
 }
 
-.blagboard-shop-p:active{
+.blagboard-shop-p:active {
   top: 1px;
   position: relative;
 }
@@ -89,11 +112,11 @@ body {
   white-space: nowrap;
   font-size: 16px;
   text-decoration: none;
-  color:#000;
+  color: #000;
   transition: 0.3s;
 }
 
-.about-us-p:hover{
+.about-us-p:hover {
   color: #0a20e6;
 }
 
@@ -112,11 +135,11 @@ body {
 
 .support-p {
   margin-bottom: 0px;
-  color:black;
+  color: black;
   text-decoration: none;
 }
 
-.support-p:hover{
+.support-p:hover {
   color: #0a20e6;
 }
 
@@ -243,7 +266,9 @@ body {
 }
 
 .container-right-icons {
-  margin-bottom: 6px;
+  display: flex;
+
+  align-items: center;
 }
 
 .market {

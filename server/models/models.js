@@ -1,4 +1,4 @@
-const sequelize = require("../db");
+const sequelize = require("../db");//библитека для работы с бд
 const { DataTypes } = require("sequelize");
 
 const User = sequelize.define("user", {
@@ -7,6 +7,7 @@ const User = sequelize.define("user", {
   password: { type: DataTypes.STRING },
   role: { type: DataTypes.STRING, defaultValue: "User" },
 });
+
 
 const Basket = sequelize.define("basket", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -64,6 +65,10 @@ const OrderDevice = sequelize.define("order_device", {
   count: { type: DataTypes.INTEGER, allowNull: false },
 });
 
+// здесь описываются типы связй и добавляются внешние ключи 
+
+
+// Связи для модели User
 User.hasOne(Basket);
 Basket.belongsTo(User);
 
@@ -92,6 +97,8 @@ Device.belongsTo(Type);
 Brand.hasMany(Device);
 Device.belongsTo(Brand);
 
+// Cвязи для таблицы Device
+
 Device.hasMany(Rating);
 Rating.belongsTo(Device);
 
@@ -100,6 +107,7 @@ BasketDevice.belongsTo(Device);
 
 Device.hasMany(DeviceInfo, { as: "info" });
 DeviceInfo.belongsTo(Device);
+
 
 Type.belongsToMany(Brand, { through: TypeBrand });
 Brand.belongsToMany(Type, { through: TypeBrand });

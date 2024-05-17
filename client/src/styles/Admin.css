@@ -1,37 +1,49 @@
-.container-adminclass {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.admin-panel {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
   width: 100vw;
 }
+.admin-panel__container {
+  max-width: 2400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
-.add-typee {
-  margin-right: 20vw;
-  width: 20vw;
+.admin-panel__wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  /* flex-direction: column; */
+}
+
+.admin-panel__tools {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  color:#0a20e6;
+}
+
+.tools__add-type {
+  color:#0a20e6;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
     0px 18px 36px rgba(166, 175, 186, 0.2);
   border-radius: 24px;
-  margin-top: 3vh;
+  /* margin-top: 3vh; */
   transition: 0.3s;
   cursor: pointer;
 }
 
-.add-typee:hover {
+.tools__add-type:hover {
   background-color: #0a20e6;
   color: white;
 }
 
-.add-brand {
-  margin-right: 20vw;
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.tools__add-brand {
+  /* margin-right: 20vw; */
+  /* width: 20vw; */
+  color:#0a20e6;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
@@ -42,16 +54,14 @@
   cursor: pointer;
 }
 
-.add-brand:hover {
+.tools__add-brand:hover {
   background-color: #0a20e6;
   color: white;
 }
 
-.add-market {
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.tools__add-item {
+  /* width: 20vw; */
+  color:#0a20e6;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
@@ -62,16 +72,14 @@
   cursor: pointer;
 }
 
-.add-market:hover {
+.tools__add-item:hover {
   background-color: #0a20e6;
   color: white;
 }
 
-.delete-brand-or-type {
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.tools__delete {
+  color:#0a20e6;
+  /* width: 20vw; */
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
@@ -82,7 +90,7 @@
   cursor: pointer;
 }
 
-.delete-brand-or-type:hover {
+.tools__delete:hover {
   background-color: #0a20e6;
   color: white;
 }
@@ -90,9 +98,6 @@
 .admin-row-11 {
   margin-left: 0vw;
   width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15),
@@ -161,14 +166,12 @@
 }
 
 @media screen and (max-width: 1080px) {
-  .container-adminclass {
+  .admin-panel {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .container-adminclass-second {
-    margin-right: 0px;
-  }
+
   .add-brand {
     margin-right: 0vw;
   }
@@ -186,7 +189,7 @@
     width: 400px;
     margin-right: 0vw;
   }
-  .add-typee {
+  .add-type {
     width: 400px;
     margin-right: 0vw;
   }
@@ -218,7 +221,7 @@
     width: 300px;
     margin-right: 0vw;
   }
-  .add-typee {
+  .add-type {
     width: 300px;
     margin-right: 0vw;
   }

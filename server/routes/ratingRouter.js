@@ -1,8 +1,8 @@
 const Router = require("express");
 const router = new Router();
-const authMiddleware = require("./../middleware/authMiddleware");
-const checkAddRatingMiddleware = require("./../middleware/checkAddRatingMiddleware");
-const ratingController = require("./../controllers/ratingController");
+const authMiddleware = require("../middleware/authMiddleware.js");
+const checkAddRatingMiddleware = require("../middleware/checkAddRatingMiddleware.js");
+const ratingController = require("../controllers/ratingController.js");
 
 router
   .post(
