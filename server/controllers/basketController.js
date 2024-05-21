@@ -2,85 +2,50 @@ const {
   Basket,
   BasketDevice,
   Device,
-  DeviceInfo,
+  User,
 } = require("../models/models.js");
+
 const jwt = require("jsonwebtoken");
 const { Op } = require("sequelize");
 
+
 class BasketController {
+  // Метод добавления товаров в корзину 
   async addToBasket(req, res) {
+    const { userId, deviceId } = req.body;
     try {
-      const { id } = req.body;
-      const token = req.headers.authorization.split(" ")[1];
-      const user = jwt.verify(token, process.env.SECRET_KEY);
-      const basket = await Basket.findOne({ where: { userId: user.id } });
-      await BasketDevice.create({ basketId: basket.id, deviceId: id });
-      return res.json("Product added in card");
-    } catch (e) {
-      console.error(e);
-    }
-  }
-
-  async getAll(req, res) {
-    try {
-      const token = req.headers.authorization.split(" ")[1];
-      const user = jwt.verify(token, process.env.SECRET_KEY);
-      const { id } = await Basket.findOne({ where: { userId: user.id } });
-      const basket = await BasketDevice.findAll({ where: { basketId: id } });
-
-      const basketArr = [];
-      for (let i = 0; i < basket.length; i++) {
-        const basketDevice = await Device.findOne({
-          where: {
-            id: basket[i].deviceId,
-          },
-          include: {
-            model: DeviceInfo,
-            as: "info",
-            where: {
-              deviceId: basket[i].deviceId,
-              [Op.or]: [
-                {
-                  deviceId: {
-                    [Op.not]: null,
-                  },
-                },
-              ],
-            },
-            required: false,
-          },
-        });
-        basketArr.push(basketDevice);
+      const user = await User.findByPk(userId);
+      if (!user) {
+        throw new Error("Пользователь не найден");
+      }
+      let basket = await Basket.findOne({ where: { userId: user.id } });
+      if (!basket) {
+        basket = await Basket.create({ userId: user.id });
       }
 
-      return res.json(basketArr);
+      const device = await Device.findByPk(deviceId);
+      if (!device) {
+        throw new Error('Товар не найден');
+      }
+
+      const basketDevice = await BasketDevice.create({
+        basketId: basket.id,
+        deviceId: device.id
+      });
+
+      return res.json({
+        message: 'Товар добавлен успешно',
+        basketDevice
+      });
+
     } catch (e) {
       console.error(e);
+      res.status(500).json({
+        message: 'Ошибка добавления в корзину',
+        error: e.message
+      })
     }
   }
-
-  // async deleteDevice(req, res) {
-  //   try {
-  //     const { id } = req.params;
-  //     const user = req.user;
-
-  //     await Basket.findOne({ where: { userId: user.id } }).then(
-  //       async (userBasket) => {
-  //         if (userBasket.userId === user.id) {
-  //           await BasketDevice.destroy({
-  //             where: { basketId: userBasket.id, deviceId: id },
-  //           });
-  //         }
-  //         return res.json(
-  //           `You haven't access for delete the device(${id}) from basket that didn't belong to you`
-  //         );
-  //       }
-  //     );
-  //     return res.json("Product deleted form your card");
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // }
 }
 
 module.exports = new BasketController();
