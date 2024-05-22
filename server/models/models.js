@@ -1,4 +1,4 @@
-const sequelize = require("../db");//библитека для работы с бд
+const { sequelize } = require("../db");//библитека для работы с бд
 const { DataTypes } = require("sequelize");
 
 const User = sequelize.define("user", {
@@ -8,6 +8,31 @@ const User = sequelize.define("user", {
   role: { type: DataTypes.STRING, defaultValue: "User" },
 });
 
+const session = sequelize.define('session', {
+  sid: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    primaryKey: true,
+  },
+  sess: {
+    type: DataTypes.JSON,
+    allowNull: false,
+  },
+  expire: {
+    type: DataTypes.DATE(6),
+    allowNull: false,
+  }
+}, {
+  tableName: "session",
+  freezeTableName: true,
+  indexes: [
+    {
+      name: 'IDX_session_expire',
+      fields: ['expire']
+    }
+  ],
+  timestamps: false,
+});
 
 const Basket = sequelize.define("basket", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -124,4 +149,5 @@ module.exports = {
   DeviceInfo,
   Orders,
   OrderDevice,
+  session,
 };

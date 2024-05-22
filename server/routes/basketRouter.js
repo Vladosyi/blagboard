@@ -5,12 +5,5 @@ const authMiddleware = require("./../middleware/authMiddleware");
 const checkDeleteDeviceFromBasket = require("./../middleware/checkDeleteDeviceFromBasket");
 
 router.post("/", BasketController.addToBasket);
-// router.delete(
-//   "/:id",
-//   authMiddleware,
-//   checkDeleteDeviceFromBasket,
-//   BasketController.deleteDevice
-// );
-
 
 module.exports = router;
