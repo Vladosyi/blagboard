@@ -190,6 +190,17 @@ class DeviceController {
       return res.json(e);
     }
   }
+  
+  async getDevicesByVisitsDescending(req, res) {
+    try {
+      const devices = await Device.findAll({
+        order: [['visits', 'DESC']]
+      });
+      return res.json(devices); 
+    } catch (e) {
+      throw new Error('Не получилось вернуть самые популярные товары');
+    }
+  }
 
   async update(req, res) {
     try {
