@@ -1,6 +1,6 @@
-const { Op } = require("sequelize");
 const uuid = require("uuid");
 const path = require("path");
+const { Op } = require("sequelize");
 const {
   Device,
   DeviceInfo,
