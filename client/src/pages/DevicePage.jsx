@@ -33,6 +33,7 @@ const DevicePage = () => {
             </div>
             <div className="aracteristics-contahiner">
               <div className="haracteristics-text">Характеристики:</div>
+
               {device.info.map((info) => (
                 <div key={info.id}>
                   {info.title}; {info.description}

@@ -2,184 +2,91 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
 
-.container-main-brand {
-  font-family: "Alegreya Sans", sans-serif;
-  display: flex;
-  position: relative;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 60%;
-  height: 300px;
-  margin-top: 10px;
-  font-weight: 400;
-  font-size: 30px;
-  margin-left: 7%;
-  border: 0;
-  justify-content: center;
-  align-items: center;
-  right: 0;
-}
-
-.container-second {
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-  /* border: 10px; */
-}
-
-.container-filter-second {
-  padding-bottom: 20px;
-  padding-top: 6%;
-  padding-left: 10%;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: 27px;
-  border-bottom: 2px solid #ebecee;
-  /* box-sizing: border-box; */
-}
-
-/* .solid {
-  display: flex;
-  border-bottom: 2px solid #ebecee;
-  width: 240px;
-  justify-content: center;
-  align-items: center;
-} */
-
-.container-main-brand {
-  font-family: "Alegreya Sans", sans-serif;
-  display: inline-block;
-  position: relative;
-  border-collapse: collapse;
-  border-radius: 24px;
-  width: 300px;
-  height: 650px;
-  margin-top: 10px;
-  font-weight: 400;
-  font-size: 30px;
-  margin-left: 7%;
-  border: 2px solid #ebecee;
-  justify-content: center;
-  align-items: center;
-  right: 0;
-}
-
-.container-first {
-  display: flex;
-  padding-left: 7%;
-  /* border: 2px solid #ebecee; */
-}
-
-.container-second {
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.p-2 {
-  font-family: "Alegreya Sans", sans-serif;
-  color: #a6afba;
+.brand-bar__h1 {
   font-size: 20px;
-  flex-direction: row-reverse;
-  padding: 0;
-  font-weight: 300;
-  cursor: pointer;
-  transition: 0.25s;
-}
-.p-2:hover {
-  color: black;
-}
-.p-2:active {
-  top: 1px;
-
-  position: relative;
-}
-
-/* .brand-name-brandBar {
-  /* padding: 20px; 
-  /* border: 2px solid #ebecee; 
-} */
-
-/* .brand-name-brandBar:hover {
-  color: black;
-} */
-
-/* .brand-name-brandBar:active {
-  top: 1px;
-
-  /* color: red;
-  position: relative;
-} */
-
-.bichecksquare {
-  transition: 0.25s;
-  margin-right: 10px;
-}
-
-.bichecksquare:hover {
   color: black;
 }
 
-.bichecksquarefill {
-  display: none;
-  transition: 0.25s;
-  margin-right: 10px;
+.brand-bar {
+  flex: 0 0 150px;
+  
+  /* word-wrap: break-word; */
 }
-
-.btn-outline-danger {
+.brand-bar__container {
+  /* max-width: 140px; */
+}
+.brand-bar__wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.brand-bar__list {
+  width: 100%;
+  line-height: 1.2;
+  padding: 10px;
+  background-color: #0a20e6;
+  border-radius: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+  font-weight: 400;
+  color: #ffffff;
+  transition: 0.25s;
+  cursor: pointer;
+  font-size: 25px;
 }
 
-.show-all-device {
-  font-family: "Inter Tight", sans-serif;
-  /* display: flex; */
-  /* position: relative; */
-  border-collapse: collapse;
+.brand-bar__item {
+  font-family: "Alegreya Sans", sans-serif;
+
+  padding: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+.brand-bar__item:hover {
+  color: black;
+}
+.brand-bar__button {
+ 
   background-color: #0a20e6;
   border-radius: 24px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  max-width: 60%;
-  /* height: 60px; */
-  /* margin-top: 20px; */
-  font-weight: 300;
-  font-size: 1px;
-  margin-left: 10%;
   border: 0;
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* right: 0; */
-  flex-direction: column;
   color: #ffffff;
-  font-size: 20px;
-  transition: 0.25s;
+  font-size: 18px;
   cursor: pointer;
+  padding: 10px;
+  margin-top: 30px;
 }
-
-.show-all-device:hover {
+.brand-bar__button:hover {
   background-color: #ffffff;
   color: black;
-  font-weight: 400;
+
+  transition: 0.2s;
+  transform: translateY(-3px);
 }
 
-.show-all-device:active {
-  position: relative;
-  top: 1px;
+
+
+.page-link{
+  padding: 1px 10px;
+
 }
 
-.show-all-device-first {
-  font-size: 16px;
-}
-
-.show-all-device-second {
-  font-size: 16px;
-}
-.pagination-shop {
-  display: flex;
-  overflow-y: hidden;
-  justify-content: center;
-  align-items: center;
-  /* margin-left: 12%; */
-  margin-top: 10%;
+@media screen and (max-width: 1025px) {
+  .brand-bar {
+    flex: 0 0 130px;
+  }
+  .brand-bar__list {
+    line-height: 1.3;
+    font-size: 18px;
+  }
+  .brand-bar__button {
+    line-height: 1.2;
+    font-size: 14px;
+    padding: 8px;
+    margin-top: 20px;
+  }
+  .brand-bar__h1 {
+    font-size: 18px;
+    color: black;
+  }
 }

@@ -52,7 +52,7 @@
   margin: auto;
 }
 
-h1{
+.auth-page h1{
   color: white;
   margin-bottom: 30px;
   font-size: 76px;
@@ -83,7 +83,7 @@ input[type="text"] {
 
 
 
-button {
+.auth-page button {
   background: #4044ed;
   padding: 10px;
   width: inherit;
@@ -93,7 +93,7 @@ button {
   color: #fff;
 }
 
-button:hover {
+.auth-page button:hover {
   background: #4f52fd;
 }
 

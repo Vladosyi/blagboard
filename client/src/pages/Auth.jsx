@@ -23,20 +23,18 @@ const Auth = observer(() => {
   const navigate = useNavigate();
 
   const { user } = useContext(Context);
-  const [emailDirty, setEmailDirty] = useState(false);
-  const [passwordDirty, setPasswordDirty] = useState(false);
-  const [emailError, setEmailError] = useState("Email не может быть пустым");
-  const [passwordError, setPasswordError] = useState(
-    "Password не может быть пустым"
-  );
+  // const [emailDirty, setEmailDirty] = useState(false);
+  // const [passwordDirty, setPasswordDirty] = useState(false);
+  // const [emailError, setEmailError] = useState("Email не может быть пустым");
+  // const [passwordError, setPasswordError] = useState(
+  //   "Password не может быть пустым"
+  // );
   const click = async () => {
     try {
       let data;
-      if (isLogin) {
-        data = await login(email, password);
-      } else {
-        data = await registration(email, password);
-      }
+      isLogin
+        ? (data = await login(email, password))
+        : (data = await registration(email, password));
       user.setUser(data);
       user.setIsAuth(true);
       navigate(SHOP_ROUTE);
@@ -59,11 +57,11 @@ const Auth = observer(() => {
             <img className="img-right-bottom3" src={RightBottom3} alt="" />
           </div>
           <form className="auth-page__form">
-             <h1>{isLogin ? 'Вход' : 'Регистрация'}</h1>
+            <h1>{isLogin ? "Вход" : "Регистрация"}</h1>
             <div className="input">
-              {emailDirty && emailError && (
+              {/* {emailDirty && emailError && (
                 <div style={{ color: "red" }}>{emailError} </div>
-              )}
+              )} */}
               <input
                 type="text"
                 placeholder="Email"
@@ -72,9 +70,9 @@ const Auth = observer(() => {
               ></input>
             </div>
             <div className="input">
-              {passwordDirty && passwordError && (
+              {/* {passwordDirty && passwordError && (
                 <div style={{ color: "red" }}>{passwordError} </div>
-              )}
+              )} */}
               <input
                 type="text"
                 placeholder="Password"
@@ -82,13 +80,19 @@ const Auth = observer(() => {
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
             </div>
-            <button onClick={click}>Отправить</button>
-            {isLogin ? ( <div className="footer"> Нет аккаунта?
+            <button onClick={click}>
+              {isLogin ? "Войти" : "Зарегистрироваться"}
+            </button>
+            {isLogin ? (
+              <div className="footer">
+                Нет аккаунта?
                 <Link className="registration" to={REGISTRATION_ROUTE}>
                   Зарегистрироваться
                 </Link>
               </div>
-            ) : ( <div className="footer"> Есть аккаунт?
+            ) : (
+              <div className="footer">
+                Есть аккаунт?
                 <Link className="registration" to={LOGIN_ROUTE}>
                   Войти
                 </Link>

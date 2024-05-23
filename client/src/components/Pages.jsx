@@ -9,14 +9,15 @@ const Pages = observer(() => {
   const pages = [];
 
   for (let i = 1; i <= pageCount; i++) {
-    pages.push(i );
+    pages.push(i);
   }
 
   return (
     <div className="pagination">
       <Pagination className="mt-3">
         {pages.map((page) => (
-          <Pagination.Item
+          <Pagination.Item 
+          className="pagination__item"
             key={page}
             active={device.page === page}
             onClick={() => device.setPage(page)}

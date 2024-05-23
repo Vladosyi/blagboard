@@ -14,107 +14,47 @@
   box-sizing: border-box;
 }
 
-.wrapper {
-  display: inline-block;
-  width: 100vw;
-  height: 40vh;
-  margin-left: 0;
-  margin-right: 0;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 2px 4px rgb(76 92 107 / 15%);
-}
-
-.forma-shop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-}
-
-.table-main-left {
-  position: relative;
+.type-Bar {
   font-family: "Alegreya Sans", sans-serif;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   width: 100vw;
-  height: 50px;
-  margin-top: 60px;
-  font-weight: 300;
-  font-size: 22px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15);
-  background-position: right;
-  background-repeat: no-repeat;
+  box-shadow: 0px 0px 6px rgba(76, 92, 107, 0.6);
   color: rgb(212, 212, 212);
 }
 
-.table-container {
-  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15);
-}
 
-.form1-second {
+.type-Bar__wrapper {
+  font-weight: 500;
+  font-size: 25px;
   display: flex;
-  border: 3px;
-  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15);
-}
-
-.form1 {
-  display: flex;
-  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15);
-  border: 3px;
-}
-
-.col-md-9 {
-  box-shadow: 0px 2px 4px rgba(76, 92, 107, 0.15);
-  border: 3px;
-}
-
-.table-inside {
+  justify-content: space-around;
+  align-items: center;
   color: rgb(126, 126, 126);
-  transition: 0.2s;
   padding: 10px;
+  cursor: pointer;
+}
+.type-Bar li {
+  list-style-type: none;
 }
 
-.table-inside:hover {
+.type-Bar__li:hover {
+  transition: 0.3s;
   color: #000;
 }
 
-.strelka {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #0a20e6;
-}
-.location-locc {
-  color: #0a20e6;
-}
 
-.strelka:active {
-  position: relative;
-  top: 3px;
-}
 
-.Pagination-shop {
-  display: flex;
-  margin-left: 30%;
-  margin-bottom: 290px;
-}
-
-@media screen and (max-width: 550px) {
-  .table-main-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 15px;
+@media screen and (max-width: 1050px) {
+  .type-Bar__wrapper {
+    
     font-size: 20px;
+    padding: 4px;
   }
 }
 
 @media screen and (max-width: 470px) {
-  .table-main-left {
+  .type-Bar__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +64,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  .table-main-left {
+  .type-Bar__wrapper {
     display: flex;
     font-size: 14px;
     font-weight: 500;
@@ -132,7 +72,7 @@
 }
 
 @media screen and (max-width: 375px) {
-  .table-main-left {
+  .type-Bar__wrapper {
     display: flex;
     font-size: 12px;
     font-weight: 600;

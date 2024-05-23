@@ -11,7 +11,7 @@ const DeleteBrandOrType = ({ show, onHide, showSuccessMsgFunc }) => {
   const [brandOrType, setBrandOrType] = useState("Бренд");
   const [brands, setBrands] = useState([]);
   const [types, setTypes] = useState([]);
-  const [selectBrand, setSelectBrand] = useState({name: "Бренд не выбран",});
+  const [selectBrand, setSelectBrand] = useState({ name: "Бренд не выбран" });
   const [selectType, setSelectType] = useState({ name: "Тип не выбран" });
   const [showMsgErr, setShowMsgErr] = useState(false);
   const [msgErr, setMsgErr] = useState("");

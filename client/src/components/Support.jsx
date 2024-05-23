@@ -8,9 +8,15 @@ const Support = () => {
         <div className="support-container-second">
           <div className="suppot-text">ПОДДЕРЖКА</div>
           <div className="suppot-text-second">
-            <div><span className="support-email-span">Email: </span>nomoconov.sanya@gmail.com</div>
             <div>
-            <span className="support-email-span">Номер телефона магазина:</span> +7 914 556-59-89, +7 962 285-59-89
+              <span className="support-email-span">Email: </span>
+              
+            </div>
+            <div>
+              <span className="support-email-span">
+                Номер телефона магазина:
+              </span>{" "}
+              +7 914 556-59-89, +7 962 285-59-89
             </div>
           </div>
         </div>

@@ -2,10 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter.jsx";
 import NavBar from "./components/NavBar.jsx";
-import { LOGIN_ROUTE } from "./utils/consts";
-import { REGISTRATION_ROUTE } from "./utils/consts";
-import { SHOP_ROUTE } from "./utils/consts";
-import { useLocation } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { Context } from "./index";
 import { check } from "./http/userAPI";
@@ -15,6 +11,7 @@ import { Spinner } from "react-bootstrap";
 const App = observer(() => {
   const { user } = useContext(Context);
   const [loading, setLoading] = useState(false);
+  
 
   useEffect(() => {
     if (localStorage.getItem("token")) {
@@ -29,7 +26,7 @@ const App = observer(() => {
           setLoading(false);
         });
     }
-  }, []);
+  }, [user]);
 
   if (loading) {
     return (
@@ -41,7 +38,7 @@ const App = observer(() => {
 
   return (
     <BrowserRouter>
-      <NavBar />
+     <NavBar /> 
       <AppRouter />
     </BrowserRouter>
   );
