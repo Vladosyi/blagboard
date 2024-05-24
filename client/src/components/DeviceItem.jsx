@@ -14,7 +14,7 @@ const DeviceItem = ({ device }) => {
   const navigate = useNavigate();
   const addToBasket = (device, user) => {
     console.log("Добавлено в корзину");
-    addDevice(device.id, user.id);
+    addDevice(device.id, user.User.id);
   };
   return (
     <div className="device-item">
