@@ -15,7 +15,7 @@ class BasketController {
   async addToBasket(req, res) {
     const { userId, deviceId } = req.body;
     try {
-      const token = req.headers['authorization'];
+      const token = req.headers.authorization.split(" ")[1];
       if (!token) {
 
         if (!req.session.basket) {
