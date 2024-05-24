@@ -7,13 +7,14 @@ import { addDeviceToBasket } from "../http/deviceAPI";
 import { Context } from "..";
 import BUSKET_ICON from "../img/busket_icon.svg";
 import RATING from "../img/rating.svg";
+import { addDevice } from "../http/BusketAPI";
 
 const DeviceItem = ({ device }) => {
-  const { busketDevice } = useContext(Context);
+  const { busketDevice, user } = useContext(Context);
   const navigate = useNavigate();
-  const addToBasket = (device) => {
-    console.log("dffds");
-    // addDeviceToBasket(device);
+  const addToBasket = (device, user) => {
+    console.log("Добавлено в корзину");
+    addDevice(device.id, user.id);
   };
   return (
     <div className="device-item">
@@ -25,7 +26,7 @@ const DeviceItem = ({ device }) => {
               src={BUSKET_ICON}
               alt="busket_icon"
               className="device-item__busket-icon"
-              onClick={() => addToBasket()}
+              onClick={() => addToBasket(device, user)}
             />
           </div>
           <div
