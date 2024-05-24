@@ -37,6 +37,7 @@ class UserController {
   }
 
   async login(req, res, next) {
+    try {
     const { email, password } = req.body;
     const user = await User.findOne({ where: { email } });
     if (!user) {
@@ -73,7 +74,11 @@ class UserController {
 
       req.session.basket = [];
     }
-    return res.json({ token });
+    return res.json({ token: token });
+  } catch (e) {
+    console.log(e);
+    return res.status(500).json({error: e});
+  }
   }
 
   async check(req, res, next) {

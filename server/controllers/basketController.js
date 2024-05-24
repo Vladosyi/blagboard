@@ -16,7 +16,7 @@ class BasketController {
     const { userId, deviceId } = req.body;
     try {
       const token = req.headers.authorization.split(" ")[1];
-      if (!token) {
+      if (token == 'null') {
 
         if (!req.session.basket) {
           req.session.basket = [];
