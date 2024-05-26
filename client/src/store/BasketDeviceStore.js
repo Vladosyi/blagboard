@@ -7,7 +7,6 @@ export default class BasketDeviceStore {
   }
   setDeviceInBasket(devices){
     this._deviceInBasket = devices;
-
   }
   get deviceInbasket(){
     return this._deviceInBasket;

@@ -85,6 +85,14 @@ export const getAllDevicesInAdminPage = async (
   return data;
 };
 
+/**
+ * @async
+ * @param {Object} device
+ * @param {string} device.userId
+ * @param {string} device.deviceId
+ *
+ * @returns {Promise<any>}
+ */
 export const addDeviceToBasket = async (device) => {
   const { data } = await $authHost.post("api/basket", device);
   return data;
