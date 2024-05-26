@@ -1,3 +1,7 @@
+/*TODO: у тебя много где подгружаются стили, но в любом случае у тебя все стили в результате будут в одном большом (или нескольких чуть поменьше .css файлах),
+   если весь js будет загружаться при загрузке страницы (чтобы загружать только то что нужно https://react.dev/reference/react/lazy (у тебя проект не большой можно и без него обойтись)
+    Вот к чему все это - было бы не плохо вынести подключение шрифтов в отдельный css файл
+    */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");

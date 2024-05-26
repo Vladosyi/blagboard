@@ -22,6 +22,7 @@ const Shop = observer(() => {
   //   });
   // }, []);
 
+
   useEffect(() => {
     fetchTypes().then((data) => device.setTypes(data));
 

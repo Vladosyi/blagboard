@@ -4,6 +4,8 @@ import { Context } from "../index";
 import "../styles/TypeBar.css";
 
 
+// TODO: сементика -  ul
+
 const TypeBar = observer(() => {
   const { device } = useContext(Context);
 

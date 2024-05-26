@@ -14,7 +14,8 @@ const DevicePage = () => {
   useEffect(() => {
     fetchOneDevice(id).then((data) => setDevices(data));
   }, []);
-
+//TODO: куча не нужной вложенности, но если стремишься к БЭМу (что писал тебе в ВА), то ок,
+// но опять же в реакте это выглядит подругому)
   return (
     <div className="container-devicePage-first">
       <div className="container-DevicePage">

@@ -6,6 +6,8 @@ import { Context } from "../index";
 import { observer } from "mobx-react-lite";
 import Shop from "../pages/Shop";
 
+// TODO: было бы неплохо добавить роутер для обработки ошибок как минимум 5хх
+
 const AppRouter = observer(() => {
   const { user } = useContext(Context);
 

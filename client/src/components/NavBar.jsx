@@ -17,6 +17,8 @@ import SHOPPINGCART from "../img/shopping-cart.svg";
 
 import { Link, useLocation } from "react-router-dom";
 import { observer } from "mobx-react-lite";
+// TODO: декомпозировать
+
 
 const NavBar = observer(() => {
   const location = useLocation();

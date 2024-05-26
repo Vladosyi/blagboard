@@ -7,6 +7,8 @@ import {
   fetchTypes,
 } from "../../http/deviceAPI.js";
 
+
+// TODO: не видел в деле, но мухи отдельно, а котлеты отдельно
 const DeleteBrandOrType = ({ show, onHide, showSuccessMsgFunc }) => {
   const [brandOrType, setBrandOrType] = useState("Бренд");
   const [brands, setBrands] = useState([]);

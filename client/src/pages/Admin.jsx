@@ -19,6 +19,8 @@ import {
   Pagination,
   Row,
 } from "react-bootstrap";
+
+// TODO: декомпозировать
 const Admin = () => {
   const [brandVisible, setBrandVisible] = useState(false);
   const [typeVisible, setTypeVisible] = useState(false);

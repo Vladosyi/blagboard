@@ -11,12 +11,13 @@ const { Op } = require("sequelize");
 
 class BasketController {
 
-  // Метод добавления товаров в корзину 
+  // Метод добавления товаров в корзину
   async addToBasket(req, res) {
     const { userId, deviceId } = req.body;
     try {
       const token = req.headers['authorization'];
       if (!token) {
+        //TODO: при каких сценраиях может не быть авторизации?
 
         if (!req.session.basket) {
           req.session.basket = [];
@@ -33,6 +34,8 @@ class BasketController {
         const user = await User.findByPk(userId);
 
         if (!user) {
+          // TODO: непомню где и от кого слышал про использование throw Error catch,
+          //  но в там эту конструкцию сравнивали с goto
           throw new Error("Пользователь не найден");
         }
 
@@ -53,6 +56,8 @@ class BasketController {
           deviceId: device.id
         });
 
+        // TODO: Вывод текстовых сообщений лучше поностью оставить на фронте,
+        //  где они будут обрабатываться в зависимоти от действий пользователя и успешности выполнения ручки
         return res.json({
           message: 'Товар добавлен успешно',
           basketDevice
@@ -98,12 +103,16 @@ class BasketController {
           return res.json(basketClear);
         }
       } else {
+        //TODO: лучше не менять контракты в зависимоти от условий, эту проверку оставь на фронте
         return res.json({
           message: "Корзина пуста",
         })
       }
     } catch (e) {
       console.log(e)
+      //TODO: не 500, т.к. 5хх это ошибки что сервер не доступен и тп
+      // в этом же случае можно было бы вернуть 4хх, тк сервер обработал ошибку (насколько я понимаю)
+      // но не смог найти товар
       return res.status(500).json({
         message: 'Ошибка получения товаров',
         error: e.message

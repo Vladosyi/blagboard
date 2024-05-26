@@ -22,7 +22,7 @@
 .container-about-us-avito-2gis {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: row; /*TODO: флекс по умолчанию всегда в строку*/
 }
 
 .container-about-us-second-more-text {

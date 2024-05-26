@@ -1,6 +1,10 @@
 import React from "react";
 import "../styles/Support.css";
 
+
+// TODO: номер телефона (а потом и почту) можно завернуть в <a href="mailto:...">...</a>,
+//  чтобы по клику у пользователя появлялась предложение позвонить или написать
+// появлялас
 const Support = () => {
   return (
     <div className="support-container-main">

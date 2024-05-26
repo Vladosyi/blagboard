@@ -1,7 +1,7 @@
 import React from "react";
 import {ShoppingCartItems} from "../components/ShoppingCartItems";
 
-
+//TODO: так Basket или Cart?)))
 const Basket = () => {
     // const {device}
     return (

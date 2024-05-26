@@ -1,5 +1,7 @@
 import {$authHost, $host} from "./index";
 
+//TODO: коли делаешь await, не забудь про try catch
+
 export const createType = async (type) => {
   const { data } = await $authHost.post("api/type", type);
   return data;
